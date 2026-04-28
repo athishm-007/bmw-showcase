@@ -1,0 +1,346 @@
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f6;
+    color: #111;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #000000, #002f6c);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+h4 {
+    background: linear-gradient(90deg, #000000, #002f6c);
+    color: white;
+    text-align: right;
+    padding: 25px;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* Navbar */
+nav {
+    background: #001f3f;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #005bbb;
+}
+
+nav a.active {
+    background: #0072ce;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #111;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+@keyframes shake {
+    0% { transform: translate(2px, 2px); }
+    25% { transform: translate(-2px, -2px); }
+    50% { transform: translate(2px, -2px); }
+    75% { transform: translate(-2px, 2px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* CURSOR GLOW */
+.cursor {
+    width: 20px;
+    height: 20px;
+    background: #0072ce;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px #0072ce;
+}
+
+/* CARD 3D EFFECT */
+.card {
+    transition: transform 0.2s ease;
+}
+
+/* Hero */
+.hero {
+    background: url("https://wallpapercave.com/wp/wp14713655.jpg") 
+    center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+form button {
+    border: none;
+    cursor: pointer;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* About Section Container */
+#about {
+    background: linear-gradient(180deg, #ffffff, #f4f7fb);
+    border-left: 6px solid #0072ce;
+}
+
+/* About Heading */
+#about h2 {
+    color: #002f6c;
+    margin-bottom: 15px;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* Subheadings inside About */
+#about h3 {
+    color: #0072ce;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+/* Paragraph styling */
+#about p {
+    font-size: 16px;
+    margin-bottom: 12px;
+    text-align: justify;
+    color: #333;
+}
+
+/* Hover effect */
+#about:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* Optional: icon style box */
+.about-box {
+    background: linear-gradient(135deg, #000000, #002f6c);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.4s ease;
+}
+
+/* Subtle glow line */
+.about-box::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #0072ce;
+}
+
+/* Hover effect */
+.about-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+.btn {
+    display: inline-block;
+    background: #0072ce;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #005bbb;
+}
+
+/* Sections */
+section {
+    padding: 40px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+
+/* Card Layout */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.card {
+    width: 200px;
+    padding: 20px;
+    background: #f5f8fc;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+    border-left: 4px solid #0072ce;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-5px);
+    background: #e6f0fa;
+}
+
+.card img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius:6px;
+    margin-bottom:10px;
+}
+
+/* 🔥 M Competition Highlight */
+.m-title {
+    text-align: center;
+    color: #b30000;
+    margin-bottom: 20px;
+}
+
+.m-card {
+    background: #111;
+    color: white;
+    border: 2px solid red;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow effect */
+.m-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    box-shadow: 0 0 15px red;
+    opacity: 0.6;
+}
+
+/* M hover */
+.m-card:hover {
+    transform: scale(1.05);
+    background: #1a0000;
+}
+
+/* Fade animation */
+.fade-in {
+    animation: fadeIn 1.2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    section {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 90%;
+    }
+}
